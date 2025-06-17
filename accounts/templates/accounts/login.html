@@ -1,0 +1,80 @@
+<!-- accounts/templates/accounts/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+    <style>
+        * {
+    box-sizing: border-box; /* Ensures padding and borders are included in the total width and height */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: Arial, sans-serif; /* Set a default font */
+    
+    
+}
+
+.container {
+    text-align: center; /* Center text inside the container */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow */
+    background-color: #7fb3d5; /* Optional: Background color */
+}
+
+form {
+    display: flex; /* Use flexbox for the form */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+label {
+    margin-bottom: 8px; /* Space between label and input */
+}
+
+input {
+    margin-bottom: 16px; /* Space between inputs */
+    padding: 10px; /* Add padding to input */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Optional: Rounded corners */
+}
+
+button {
+    padding: 10px; /* Add padding to button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Optional: Rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker button on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input title="username" type="text" name="username" required>
+            <label for="password">Password:</label>
+            <input title="password" type="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

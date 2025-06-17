@@ -1,0 +1,38 @@
+/* home/static/home/styles.css */
+
+/* Full page background image */
+body {
+    /*background-image: url("{% static 'home/ocean-waves-beach-moon-night-scenery-digital-art-hd-wallpaper-uhdpaper.com-546@2@a.jpg' %}");*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the content vertically and horizontally */
+.center-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add transparency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #7fb3d5 ;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,28 @@
+<!-- home/templates/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+    
+</head>
+<body>
+    <div class="center-content">
+        <h1>Welcome to the Home Page</h1>
+        <p>Please choose an option:</p>
+
+        <!-- Button for Login -->
+        <a href="{% url 'login' %}">
+            <button type="button">Login</button>
+        </a>
+
+        <!-- Button for Register -->
+        <a href="{% url 'register' %}">
+            <button type="button">Register</button>
+        </a>
+    </div>
+</body>
+</html>
